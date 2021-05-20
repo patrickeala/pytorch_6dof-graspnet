@@ -185,9 +185,9 @@ def main(args):
                 grasp_scores=generated_scores,
             )
             print('close the window to continue to next object . . .')
-            mlab.show()
+            # mlab.show()
+            break
 
 
 if __name__ == '__main__':
-    print("test")
     main(sys.argv[1:])
