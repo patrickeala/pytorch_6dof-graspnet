@@ -62,11 +62,11 @@ class GraspEstimator:
                                                             self.device),
                                                         threshold=1.0,
                                                         device=self.device)
-        print(f"grasps_list.shape: {grasps_list.shape}")
+        print(f"len(grasps_list): {len(grasps_list)}")
         print(f"grasps_list: {grasps_list}")
         self.keep_inliers(grasps_list, confidence_list, z_list, pc_list,
                           inlier_indices)
-        print(f"grasps_list.shape: {grasps_list.shape}")
+        print(f"len(grasps_list): {len(grasps_list)}")
         improved_eulers, improved_ts, improved_success = [], [], []
         for pc, grasps in zip(pc_list, grasps_list):
             out = self.refine_grasps(pc, grasps, self.refine_method,
